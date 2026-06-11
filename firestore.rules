@@ -1,0 +1,27 @@
+// firestore.rules
+// Deploy with: firebase deploy --only firestore:rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can only read/write their own user doc
+    match /users/{userId} {
+      allow read:  if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Barber profiles: anyone can read, only the barber can write their own
+    match /barbers/{barberId} {
+      allow read:  if true;
+      allow write: if request.auth != null && request.auth.uid == barberId;
+    }
+
+    // Reviews: anyone can read, authenticated users can create (not edit/delete)
+    match /reviews/{reviewId} {
+      allow read:  if true;
+      allow create: if request.auth != null;
+      allow update, delete: if false;
+    }
+  }
+}

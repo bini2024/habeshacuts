@@ -1,0 +1,67 @@
+/* src/components/BarberCard.css */
+.bcard { cursor: pointer; overflow: hidden; }
+
+.bcard-top {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark3) 100%);
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.bcard-avatar {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 2.5px solid var(--gold);
+  background: #3a3a3a;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 20px; font-weight: 700;
+  color: var(--gold); flex-shrink: 0;
+}
+
+.bcard-name  { font-family: var(--serif); font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+.bcard-shop  { color: var(--gold); font-size: 13px; font-weight: 600; }
+.bcard-spec  { color: rgba(255,255,255,.5); font-size: 12px; margin-top: 2px; }
+
+.bcard-body  { padding: 18px 20px; }
+
+.bcard-loc {
+  display: flex; align-items: center; gap: 5px;
+  color: var(--muted); font-size: 13px; margin-bottom: 10px;
+}
+
+.bcard-bio {
+  font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 12px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.bcard-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+
+.bcard-footer {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;
+}
+
+.price-badge {
+  font-size: 13px; font-weight: 700; color: var(--green);
+  background: #e8f8f5; padding: 4px 10px; border-radius: 6px;
+}
+
+.bcard-actions { display: flex; flex-direction: column; gap: 8px; }
+
+.ig-btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 9px; border-radius: 9px; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  text-decoration: none; transition: all .2s;
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+}
+.ig-btn:hover { opacity: .88; transform: translateY(-1px); }
+
+.book-btn {
+  width: 100%; background: var(--dark2); color: #fff;
+  border: none; padding: 11px; border-radius: 9px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: var(--sans); transition: all .2s;
+}
+.book-btn:hover { background: var(--gold); }

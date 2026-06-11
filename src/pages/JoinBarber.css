@@ -1,0 +1,41 @@
+/* src/pages/JoinBarber.css */
+.join-hero {
+  background: var(--dark);
+  padding: 96px 5% 84px;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; margin-top: 40px;
+}
+.perk-card {
+  padding: 28px; border-radius: 16px;
+  background: var(--off-white); border: 1px solid var(--border);
+  transition: all .25s;
+}
+.perk-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-gold); border-color: var(--gold-border); }
+.perk-icon { font-size: 28px; margin-bottom: 14px; }
+.perk-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.perk-card p  { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+.steps-list { max-width: 600px; margin: 0 auto; display: grid; gap: 0; }
+.step-item-v {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.step-item-v:last-child { border-bottom: none; }
+.step-num {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gold); display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 16px; font-weight: 700;
+  color: #fff; flex-shrink: 0;
+}
+.step-item-v h4 { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+.step-item-v p  { font-size: 14px; color: var(--muted); }
+
+.join-cta {
+  background: var(--dark2);
+  padding: 80px 5%;
+}

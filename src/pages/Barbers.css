@@ -1,0 +1,68 @@
+/* src/pages/Barbers.css */
+.barbers-hero {
+  background: var(--dark);
+  padding: 60px 5% 52px;
+}
+
+.barbers-filters {
+  background: #fff;
+  padding: 20px 5%;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 68px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 0 12px;
+  flex: 1;
+  min-width: 200px;
+  transition: border .2s;
+}
+.search-field:focus-within { border-color: var(--gold); }
+.search-field input {
+  border: none; background: none; outline: none; padding: 11px 0;
+  font-size: 14px; font-family: var(--sans); color: var(--dark2); width: 100%;
+}
+
+.filter-row select {
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px; font-family: var(--sans); outline: none;
+  background: var(--off-white); color: var(--dark2); cursor: pointer;
+  transition: border .2s; min-width: 160px;
+}
+.filter-row select:focus { border-color: var(--gold); }
+
+.results-meta {
+  font-size: 13px; color: var(--muted); margin-top: 12px;
+}
+
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+.empty-state h3 { font-family: var(--serif); font-size: 24px; margin-bottom: 10px; }
+.empty-state p  { color: var(--muted); font-size: 15px; max-width: 380px; margin: 0 auto; }
+
+@media (max-width: 768px) {
+  .filter-row { flex-direction: column; }
+  .search-field, .filter-row select { width: 100%; }
+}
