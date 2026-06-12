@@ -16,5 +16,5 @@ export default defineConfig({
       }
     }
   ],
-  base: '/habeshacuts/',
+  base: '/', // <-- This is the only line you need to change!
 })
