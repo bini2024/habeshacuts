@@ -8,7 +8,8 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* 👇 The only line that changed 👇 */}
+    <BrowserRouter basename="/habeshacuts">
       <AuthProvider>
         <App />
       </AuthProvider>
