@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://bini2024.github.io/habeshacuts",
+  "homepage": "https://habeshacuts.online",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
